@@ -64,7 +64,8 @@
 - **성장목표 배너**: 라임 그라데이션(`#84B622→#6C9A15`), 흰 텍스트, 전구 SVG, radius 20px.
 - **요약 카드**: 흰 카드 + `--lime-100` 기간 pill(ink 텍스트) + dt 라임 라벨.
 - **토스트**: 흰 pill + 좌측 상태 점(성공 grass / 오류 red), ink 텍스트, `role=status/alert`.
-- **일러스트 패널**(로그인): SVG 단일 파일 인라인 — 하늘 그라데이션, 구름 2겹(드리프트), 뒷언덕 2개(sky/blue-green), 앞 잔디 언덕, 노란 길, 나무(노란 캐노피+그린 서브), 마스코트 '루미'(연라임 우파루파: 둥근 머리, 검은 반짝 눈, 블러시 볼, 미소, 좌우 아가미 잎 3쌍, 앞발, 꼬리). `aria-hidden`, 장식 전용.
+- **미디어 패널**(로그인): `assets/hero.mp4` 루프 영상(`autoplay muted loop playsinline`, object-fit cover, radius 24px). 자동재생이 차단되면 JS가 가시 상태에서 재생을 재시도. `aria-hidden`, 장식 전용. (v2 초기의 SVG 초원 일러스트를 사용자 제공 영상으로 교체.)
+- **푸터**: 셸 하단 슬림 바 — `Develop. 목포AISW교육센터 서찬아 · Connect : rndxmrdl@naver.com`(mailto 링크), 캡션 12px, 상단 라임 보더.
 
 ## 7. Responsive
 
