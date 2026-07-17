@@ -1,79 +1,93 @@
-# Design System — 지속가능한 실천방안 세우기 활동지 웹앱
+# Design System v2 — "Lumina Meadow" (지속가능한 실천방안 세우기 활동지 웹앱)
 
-> UI-UX-pro-max-skill 프로세스(요청 분석 → 스타일/팔레트/타이포 탐색 → 규칙·안티패턴 필터링 → 시스템 산출 → 사전 검증)에 따라 작성.
-> 산업 도메인: 교육(교사 연수) / 제품 유형: 폼 기반 활동지 웹앱 / 무드: 신뢰·성장·차분한 격려
+> UI-UX-pro-max-skill 프로세스(요청 분석 → 스타일 탐색 → 규칙·안티패턴 필터 → 시스템 산출 → 사전 검증)로 전면 개정.
+> 레퍼런스: 사용자 제공 "Lumina" 로그인 화면 (라임 그린 초원, 흰 플로팅 컨테이너, 귀여운 우파루파 마스코트, 라운드 프렌들리 타이포).
+> 스타일 분류: **Soft UI Evolution + Playful Illustration** (교육 도메인과 잘 어울리는 따뜻하고 격려하는 무드).
 
-## 1. Pattern (페이지 구조)
+## 1. Concept
 
-- **Login-gated 4-step wizard**: 상단 고정 헤더(브랜드 + 스텝 내비 1~4 + 사용자 배지) / 본문 단일 섹션 전환형 SPA.
-- 각 스텝은 "안내 헤드라인 → 입력 카드(들) → 저장 CTA" 순서. 저장 후 다음 스텝으로 유도하는 진행형 구조.
-- 4스텝: ① 로그인(센터 카드) ② 실천로드맵(2×2 카드 그리드) ③ 실천흐름(4단계 타임라인) ④ 종합 로드맵(배너 + 3×3 그리드 표 + 요약 뷰).
+"성장의 초원을 걷는 여정". 배경은 봄 들판의 라임 그린, 콘텐츠는 크게 떠 있는 흰 카드(플로팅 셸),
+마스코트(새싹 우파루파 '루미')가 로그인 화면에서 선생님을 맞이한다. 모든 페이지가 같은 셸 안에서 전환된다.
 
-## 2. Style (UI 미학)
+## 2. Pattern (페이지 구조)
 
-- **Soft Editorial / Warm Professional**: 연수 슬라이드(딥그린 + 크림 + 오렌지)의 톤을 계승.
-- 큰 라운드(16px 카드, 12px 입력), 얕고 부드러운 그림자, 넉넉한 여백. 장식보다 가독성 우선.
-- 배경에 슬라이드의 링 모티프(연그린 원형)를 미세하게 깔아 아이덴티티 유지(장식은 `aria-hidden`).
+- **Floating Shell**: 라임 그라데이션 + 미세 도트 텍스처 배경 위에 radius 32px 흰 셸이 떠 있음. 셸 안에 헤더(로고·스텝 내비·사용자)와 콘텐츠.
+- **① 로그인**: 셸 내부 2분할 — 좌: 인사 헤드라인+이름 입력 폼 / 우: 라운드(24px) SVG 일러스트 패널(하늘·언덕·나무·길·마스코트). 모바일에선 일러스트가 상단 배너로 축소.
+- **② 실천로드맵**: 2×2 흰 카드 그리드(라임 아이콘 배지), 스태거 등장.
+- **③ 실천흐름**: 4단계 타임라인 — 연라임 카드, 숫자 뱃지 1~3 그린 / 4 옐로 액센트.
+- **④ 로드맵 완성**: 라임 그라데이션 성장목표 배너(전구 아이콘) + 3×3 흰 셀 그리드 + 저장 후 요약 카드.
 
-## 3. Colors (5 core + 토큰)
+## 3. Colors
 
 | 역할 | 토큰 | 값 | 용도 |
 |---|---|---|---|
-| Primary | `--green-800` | `#14532D` | 헤더, 제목, 아이콘 배지 |
-| Secondary | `--green-600` | `#166534` | 보조 버튼, 활성 스텝, 링크 |
-| CTA | `--orange-500` | `#EA8A00` | 저장/로그인 버튼, 강조 뱃지 |
-| Background | `--cream-50` | `#FDF8F0` | 페이지 배경 |
-| Text | `--ink-900` | `#1F2A24` | 본문 텍스트 |
+| Primary | `--grass-500` | `#84B622` | CTA 버튼, 활성 스텝, 로고 |
+| Primary-deep | `--grass-600` | `#6C9A15` | hover, 아이콘 배지 |
+| Secondary | `--leaf-700` | `#4C6B1F` | 헤드라인, 카드 타이틀 |
+| Background | `--meadow-100` | `#EBF4C4` | 페이지 배경(그라데이션 하단) |
+| Text | `--ink-800` | `#38432E` | 본문 |
 
-보조 토큰: `--cream-100 #FBEEDD`(카드 배경), `--green-100 #DCEFE3`(타임라인 카드), `--green-50 #EFF7F1`(배경 링), `--line #E5DCCB`(보더), `--white #FFFFFF`, `--red-600 #DC2626`(오류), `--ink-500 #5C6B61`(보조 텍스트).
+보조: `--meadow-50 #F6FADF`(배경 상단), `--lime-100 #F0F7D4`(연카드), `--lime-200 #E2EFB4`(뱃지 배경), `--sun-400 #F5CE42`(옐로 액센트), `--sky-300 #A9D9F2`(일러스트 하늘), `--cloud #FFFFFF`, `--surface #FFFFFF`(셸/카드), `--field #F5F5F0`(입력 필드 fill), `--ink-500 #75806A`(보조 텍스트), `--red-500 #E05252`(오류), `--blush #F7C6C0`(마스코트 볼).
 
-- 본문 텍스트 대비 4.5:1 이상 유지 (`--ink-900` on `--cream-50` ≈ 12:1, CTA 버튼은 white on `#EA8A00` 대신 `#1F2A24` 사용 금지 → 버튼 텍스트는 white, 대비 확보 위해 `#D97E00`까지 어둡게 조정 가능).
-- 다크모드는 범위 외(연수장 프로젝터/개인 기기 라이트 사용 전제). `color-scheme: light` 명시.
+- 대비: `--ink-800` on `--surface` ≈ 10:1, 버튼 white on `--grass-500` 은 굵은(700) 15px 이상만 사용, 본문급엔 `--grass-600` 이상. 검증 항목에 포함.
+- 다크모드 범위 외(`color-scheme: light`).
 
 ## 4. Typography
 
-- **Pretendard Variable** (CDN: jsdelivr `pretendard/dist/web/variable/pretendardvariable-dynamic-subset.css`), 폴백 `system-ui, 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif`.
-- 스케일: 페이지 타이틀 28/700, 섹션 헤드라인 22/700, 카드 타이틀 17/700, 본문·입력 15/400(행간 1.6), 캡션 13/400.
-- 자간 미세 축소(-0.01em)로 한글 가독 최적화. 숫자 스텝 뱃지는 700.
+- **Display**: `Jua` (Google Fonts, 한글 라운드체) — 로고, 페이지 헤드라인, 스텝 타이틀, 마스코트 말풍선. 레퍼런스의 둥근 로고 타이포를 한글로 번역한 선택.
+- **Body**: `Pretendard Variable` — 본문, 입력, 안내문. 폴백 system-ui 계열.
+- 스케일: 로고 22(Jua) / 헤드라인 30(Jua) / 섹션 타이틀 20(Jua) / 카드 타이틀 17(Jua) / 본문·입력 15(Pretendard 400, lh 1.6) / 캡션 13.
 
-## 5. Key Effects
+## 5. Key Effects & Motion (스킬 규칙: 150–300ms smooth + gentle hover + reduced-motion 필수)
 
-- 전환: 150–250ms `ease-out` (페이지 fade+slide 8px, 버튼 hover 배경/그림자).
-- 카드 hover: `translateY(-2px)` + shadow 상승. 클릭 요소 전부 `cursor: pointer`.
-- 저장 중: 버튼 비활성 + 인라인 스피너(회전 애니메이션). 토스트: 하단 중앙 slide-up, 2.5초 자동 소멸.
-- `prefers-reduced-motion: reduce` 시 모든 transition/animation 해제.
+| 모션 | 스펙 |
+|---|---|
+| 페이지 전환 | fade + translateY(10px), 240ms `cubic-bezier(0.22, 1, 0.36, 1)` |
+| 스태거 등장 | 페이지 활성화 시 카드들 60ms 간격 stagger(최대 5개), 각 400ms 동일 커브 |
+| 버튼 hover | 배경 진해짐 + translateY(-2px) + 그림자 상승 200ms, 내부 화살표 `→` translateX(4px) |
+| 카드 hover | translateY(-3px) + 그림자 상승 220ms |
+| 입력 focus | 필드 fill → white, 라임 2px ring, 180ms |
+| 마스코트 | 3.2s 상하 4px bobbing 루프, 아가미 잎 2.6s 살랑임(rotate ±6°) |
+| 구름 | 두 겹이 40s/55s 좌우 drift 루프 (opacity 낮음, 주의 분산 방지) |
+| 토스트 | slide-up 12px + fade 250ms, 2.5s 후 fade-out |
+| 저장 중 | 버튼 스피너 700ms linear 회전 |
+| reduced-motion | `prefers-reduced-motion: reduce` 시 루프 애니메이션(마스코트·구름) 정지, 전환 0.01ms |
 
 ## 6. Components
 
-- **스텝 내비**: 원형 숫자 뱃지 1~4 + 라벨. 상태: 완료(체크, green-600), 현재(orange), 잠김(회색, 비활성). 로그인 전 2~4 비활성.
-- **입력 카드**: 크림 배경, 아이콘 배지(딥그린 원 + 흰 SVG 아이콘), 타이틀, 안내 문구(교안 문구 그대로), textarea(min-height 96px, 리사이즈 세로만).
-- **타임라인(스텝3)**: 데스크톱 가로 4열(연결선 + 숫자 뱃지 1~3 그린, 4 오렌지 — 슬라이드와 동일), 모바일 세로 스택.
-- **로드맵 표(스텝4)**: 상단 성장목표 배너(딥그린 배경, 흰 텍스트, 전구 SVG). 3행(기간) × 3열(실천/지원/성장 점검). 모바일에서는 기간별 카드로 세로 전환.
-- **버튼**: Primary(CTA 오렌지, white 텍스트), Ghost(그린 보더). 높이 48px, radius 12px, focus ring `2px solid --green-600 offset 2px`.
-- **토스트**: 성공(그린)/오류(레드) 아이콘 + 메시지.
-- **입력 필드**: 흰 배경, `--line` 보더, focus 시 그린 보더 + ring.
+- **셸**: max-width 1120px, radius 32px, `box-shadow: 0 24px 60px rgba(76,107,31,.14)`, 배경 위 24px 여백.
+- **헤더**(셸 상단): 좌 로고(Jua, grass-500) + 부제(캡션) / 중앙 스텝 필: pill 배경 `--lime-100`, 활성은 `--grass-500` 흰 글자, 완료 뱃지는 체크 없이 진라임. 잠김은 40% 투명.
+- **버튼**: Primary — 라임 그라데이션(`#9CCB3B→#84B622`), radius 14px, 높이 48px, 흰 700 텍스트, 화살표 포함 가능. Ghost — `--lime-100` fill, `--leaf-700` 텍스트. 모두 `cursor: pointer`.
+- **입력**: `--field` fill, 보더 없음, radius 12px, focus 시 white + 라임 ring. placeholder `#A9B199`.
+- **입력 카드**: 흰 배경, radius 20px, 얕은 그림자, 라임 원형 아이콘 배지(흰 SVG 스트로크 아이콘), Jua 타이틀, 캡션 안내문.
+- **타임라인 카드**: `--lime-100` fill, radius 20px. 숫자 뱃지 40px 원 — 1·2·3 grass, 4 sun-400(글자 ink-800).
+- **성장목표 배너**: 라임 그라데이션(`#84B622→#6C9A15`), 흰 텍스트, 전구 SVG, radius 20px.
+- **요약 카드**: 흰 카드 + `--lime-100` 기간 pill(ink 텍스트) + dt 라임 라벨.
+- **토스트**: 흰 pill + 좌측 상태 점(성공 grass / 오류 red), ink 텍스트, `role=status/alert`.
+- **일러스트 패널**(로그인): SVG 단일 파일 인라인 — 하늘 그라데이션, 구름 2겹(드리프트), 뒷언덕 2개(sky/blue-green), 앞 잔디 언덕, 노란 길, 나무(노란 캐노피+그린 서브), 마스코트 '루미'(연라임 우파루파: 둥근 머리, 검은 반짝 눈, 블러시 볼, 미소, 좌우 아가미 잎 3쌍, 앞발, 꼬리). `aria-hidden`, 장식 전용.
 
 ## 7. Responsive
 
-브레이크포인트: 375px(기준 모바일) / 768px(태블릿: 카드 2열) / 1024px(데스크톱: 최대폭 1040px 센터) / 1440px(여백 확장).
+375px(모바일 기준) / 768px(태블릿) / 1024px(데스크톱) / 1440px(셸 여백 확장).
+- 모바일: 셸 radius 20px·여백 12px, 로그인 일러스트는 높이 180px 상단 배너, 카드 1열, 타임라인 세로, 매트릭스 기간별 카드 스택(+셀 라벨 표시), 스텝 라벨 숨김.
 
 ## 8. Accessibility
 
-- 모든 입력에 `<label>` 연결, 스텝 내비는 `<nav aria-label="단계">` + `aria-current="step"`.
-- 키보드 포커스 가시화(focus-visible ring). 아이콘은 SVG 인라인(+`aria-hidden`), 이모지 UI 사용 금지.
-- 토스트는 `role="status"` (오류는 `role="alert"`).
+- 모든 입력 `<label>`(시각적 또는 sr-only), 스텝 내비 `aria-current="step"`, 일러스트·장식 `aria-hidden="true"`.
+- focus-visible: 2px `--grass-600` ring, offset 2px. 이모지 UI 금지(SVG만). 본문 대비 4.5:1+.
 
 ## 9. Anti-Patterns (금지)
 
-- AI 보라/핑크 그라데이션, 유리모피즘 남용, 네온 컬러 — 교육 도메인 부적합.
-- 이모지 아이콘, 저대비 회색 텍스트(#999 미만), 자동 재생 애니메이션.
-- 과도한 스텝 잠금(작성 순서 강제 안 함 — 로그인 후 자유 이동).
+- AI 보라/핑크 그라데이션, 네온, 유리모피즘 — 무드 파괴.
+- 마스코트·구름의 과한 애니메이션(어지러움 유발) — 진폭 4px/±6° 이내 유지.
+- 라임 배경 위 저대비 텍스트(라임 위엔 `--leaf-700` 이상만).
+- 일러스트를 로그인 외 페이지에 크게 반복(콘텐츠 집중 방해) — 이후 페이지는 셸+카드 중심.
 
 ## 10. Pre-Delivery Checklist
 
-- [ ] SVG 아이콘만 사용(이모지 없음)
-- [ ] 모든 인터랙션 요소 focus-visible 링
-- [ ] 본문 대비 4.5:1 이상
-- [ ] `prefers-reduced-motion` 대응
-- [ ] 375/768/1024 반응형 확인
-- [ ] 클릭 요소 `cursor: pointer`
+- [ ] SVG 아이콘/일러스트만 사용(이모지 없음)
+- [ ] 모든 인터랙션 요소 focus-visible 링 + `cursor: pointer`
+- [ ] 본문 대비 4.5:1 이상 (라임 배경 위 텍스트 포함)
+- [ ] `prefers-reduced-motion` — 루프 정지·전환 제거 확인
+- [ ] 375/768/1024 반응형 + 가로 스크롤 없음
+- [ ] 스태거·hover·전환이 150–300ms 규칙 내
