@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>지속가능한 실천방안 세우기 | 2026 인공지능 활용 선도교사 양성연수</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="bg-rings" aria-hidden="true"></div>
+
+<header class="app-header">
+  <div class="header-inner">
+    <div class="brand">
+      <svg class="brand-mark" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3c-4 3-6 6.5-6 10a6 6 0 0 0 12 0c0-3.5-2-7-6-10Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M12 21v-8m0 0 3-3m-3 3-3-3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div class="brand-text">
+        <strong>지속가능한 실천방안 세우기</strong>
+        <span>2026 인공지능 활용 선도교사 양성연수 · 13과정</span>
+      </div>
+    </div>
+    <nav class="stepnav" aria-label="단계">
+      <button type="button" class="step" data-page="page-roadmap" disabled><span class="step-num">1</span><span class="step-label">실천로드맵</span></button>
+      <button type="button" class="step" data-page="page-flow" disabled><span class="step-num">2</span><span class="step-label">실천흐름</span></button>
+      <button type="button" class="step" data-page="page-final" disabled><span class="step-num">3</span><span class="step-label">로드맵 완성</span></button>
+    </nav>
+    <div class="userbox" id="userbox" hidden>
+      <span class="username" id="username"></span>
+      <button type="button" class="btn-ghost btn-sm" id="btn-logout">로그아웃</button>
+    </div>
+  </div>
+</header>
+
+<main class="app-main">
+
+  <!-- ① 로그인 -->
+  <section class="page is-active" id="page-login">
+    <div class="login-card">
+      <svg class="login-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="1.6" fill="currentColor"/></svg>
+      <h1>성장의 지도를<br>그려볼까요?</h1>
+      <p class="login-desc">연수 참여자 명단에 등록된 이름을 입력하면<br>작성 내용이 나에게 저장됩니다.</p>
+      <form id="login-form">
+        <label for="login-name" class="sr-only">이름</label>
+        <input type="text" id="login-name" name="name" placeholder="이름을 입력하세요" autocomplete="name" required>
+        <button type="submit" class="btn-primary" id="btn-login">시작하기</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ② 지속가능한 실천로드맵 -->
+  <section class="page" id="page-roadmap">
+    <div class="page-head">
+      <h2>지속가능한 실천로드맵 세우기</h2>
+      <p>막연한 다짐이 아닌, 무엇을·언제·어떻게 실천할지 구체화해 봅니다.</p>
+    </div>
+    <div class="card-grid">
+      <div class="input-card">
+        <div class="card-title">
+          <span class="icon-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="1.2" fill="currentColor"/></svg></span>
+          <h3>성장 목표</h3>
+        </div>
+        <p class="card-hint">나는 ~한 교사가 될 것이다.</p>
+        <label class="sr-only" for="rm-growthGoal">성장 목표</label>
+        <textarea id="rm-growthGoal" data-draft placeholder="예) AI를 활용해 학생의 성장을 지원하는 교사 되기"></textarea>
+      </div>
+      <div class="input-card">
+        <div class="card-title">
+          <span class="icon-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M13 5a1.8 1.8 0 1 0 0-3.6A1.8 1.8 0 0 0 13 5Zm-7 17 3.2-6.4M17.5 22l-3-5.5-3.5-2 1.4-4.6M8 8.5l3.9-2.1 2 3.6 3.6 1.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <h3>실천 활동</h3>
+        </div>
+        <p class="card-hint">이를 위해 ~을 실천할 것이다. <em>(시작–적용–확장–지속)</em></p>
+        <label class="sr-only" for="rm-actions">실천 활동</label>
+        <textarea id="rm-actions" data-draft placeholder="예) 학생 맞춤형 평가 웹앱을 만들어 1개 교과부터 적용해 보기"></textarea>
+      </div>
+      <div class="input-card">
+        <div class="card-title">
+          <span class="icon-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="8" width="18" height="12" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M9 8V6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13h18M12 12v3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+          <h3>지원 자원</h3>
+        </div>
+        <p class="card-hint">실천을 위해 필요한 것들 · 활용할 연수 · 도구 · 공동체</p>
+        <label class="sr-only" for="rm-resources">지원 자원</label>
+        <textarea id="rm-resources" data-draft placeholder="예) 바이브코딩 연수, 생성형AI 구독, 학교 전문적학습공동체"></textarea>
+      </div>
+      <div class="input-card">
+        <div class="card-title">
+          <span class="icon-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="5" y="4" width="14" height="17" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M9 4.5V3h6v1.5M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <h3>점검 방법</h3>
+        </div>
+        <p class="card-hint">나의 성장을 어떻게 점검할 수 있는가 · 체크리스트, 동료피드백, 자기기록</p>
+        <label class="sr-only" for="rm-checkMethods">점검 방법</label>
+        <textarea id="rm-checkMethods" data-draft placeholder="예) 매주 금요일 사용 기록 남기기, 동료 선생님께 피드백 받기"></textarea>
+      </div>
+    </div>
+    <div class="page-actions">
+      <button type="button" class="btn-primary" id="btn-save-roadmap">저장하기</button>
+      <button type="button" class="btn-ghost" data-goto="page-flow">다음 단계로 →</button>
+    </div>
+  </section>
+
+  <!-- ③ 실천흐름 -->
+  <section class="page" id="page-flow">
+    <div class="page-head">
+      <h2>실천흐름 만들기</h2>
+      <p>시작 → 적용 → 확장 → 지속. 시간의 흐름에 따라 실천을 설계해 봅니다.</p>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <span class="tl-num">1</span>
+        <div class="tl-card">
+          <span class="tl-period">1–2개월</span>
+          <h3>시작</h3>
+          <label class="sr-only" for="fl-start">시작 단계 실천</label>
+          <textarea id="fl-start" data-draft placeholder="예) 학생 맞춤형 평가 웹앱 만들기"></textarea>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <span class="tl-num">2</span>
+        <div class="tl-card">
+          <span class="tl-period">3–4개월</span>
+          <h3>적용</h3>
+          <label class="sr-only" for="fl-apply">적용 단계 실천</label>
+          <textarea id="fl-apply" data-draft placeholder="예) 먼저 1개 교과에 적용하고 효과성 검증하기"></textarea>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <span class="tl-num">3</span>
+        <div class="tl-card">
+          <span class="tl-period">5–6개월</span>
+          <h3>확장</h3>
+          <label class="sr-only" for="fl-expand">확장 단계 실천</label>
+          <textarea id="fl-expand" data-draft placeholder="예) 필요한 기능과 아쉬운 점을 바탕으로 웹앱 업그레이드"></textarea>
+        </div>
+      </div>
+      <div class="timeline-item is-accent">
+        <span class="tl-num">4</span>
+        <div class="tl-card">
+          <span class="tl-period">이후</span>
+          <h3>지속</h3>
+          <label class="sr-only" for="fl-sustain">지속 단계 실천</label>
+          <textarea id="fl-sustain" data-draft placeholder="예) 모든 교과에 적용하고 학생별 피드백으로 성장 이끌어내기"></textarea>
+        </div>
+      </div>
+    </div>
+    <div class="page-actions">
+      <button type="button" class="btn-primary" id="btn-save-flow">저장하기</button>
+      <button type="button" class="btn-ghost" data-goto="page-final">다음 단계로 →</button>
+    </div>
+  </section>
+
+  <!-- ④ 실천로드맵 완성 -->
+  <section class="page" id="page-final">
+    <div class="page-head">
+      <h2>설계하기 — 성장의 지도를 그리다</h2>
+      <p>앞에서 작성한 내용이 자동으로 채워집니다. 다듬어서 나만의 실천로드맵을 완성하세요.</p>
+    </div>
+    <div class="goal-banner">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 18h6m-5 3h4M12 3a6 6 0 0 0-3.5 10.9c.7.5 1 1.3 1 2.1h5c0-.8.3-1.6 1-2.1A6 6 0 0 0 12 3Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <label for="fn-growthGoal">성장목표</label>
+      <input type="text" id="fn-growthGoal" data-draft placeholder="예) AI를 활용해 학생의 성장을 지원하는 교사 되기">
+    </div>
+    <div class="matrix">
+      <div class="matrix-header" aria-hidden="true">
+        <span></span><span>실천</span><span>지원</span><span>성장 점검</span>
+      </div>
+      <div class="matrix-row">
+        <span class="matrix-period">1–2개월</span>
+        <div class="matrix-cell"><label class="cell-label" for="fn-act1">실천 (1–2개월)</label><textarea id="fn-act1" data-draft placeholder="무엇을 실천할까요?"></textarea></div>
+        <div class="matrix-cell"><label class="cell-label" for="fn-sup1">지원 (1–2개월)</label><textarea id="fn-sup1" data-draft placeholder="필요한 연수·도구·지원"></textarea></div>
+        <div class="matrix-cell"><label class="cell-label" for="fn-chk1">성장 점검 (1–2개월)</label><textarea id="fn-chk1" data-draft placeholder="어떻게 점검할까요?"></textarea></div>
+      </div>
+      <div class="matrix-row">
+        <span class="matrix-period">3–4개월</span>
+        <div class="matrix-cell"><label class="cell-label" for="fn-act2">실천 (3–4개월)</label><textarea id="fn-act2" data-draft placeholder="무엇을 실천할까요?"></textarea></div>
+        <div class="matrix-cell"><label class="cell-label" for="fn-sup2">지원 (3–4개월)</label><textarea id="fn-sup2" data-draft placeholder="필요한 연수·도구·지원"></textarea></div>
+        <div class="matrix-cell"><label class="cell-label" for="fn-chk2">성장 점검 (3–4개월)</label><textarea id="fn-chk2" data-draft placeholder="어떻게 점검할까요?"></textarea></div>
+      </div>
+      <div class="matrix-row">
+        <span class="matrix-period">5–6개월</span>
+        <div class="matrix-cell"><label class="cell-label" for="fn-act3">실천 (5–6개월)</label><textarea id="fn-act3" data-draft placeholder="무엇을 실천할까요?"></textarea></div>
+        <div class="matrix-cell"><label class="cell-label" for="fn-sup3">지원 (5–6개월)</label><textarea id="fn-sup3" data-draft placeholder="필요한 연수·도구·지원"></textarea></div>
+        <div class="matrix-cell"><label class="cell-label" for="fn-chk3">성장 점검 (5–6개월)</label><textarea id="fn-chk3" data-draft placeholder="어떻게 점검할까요?"></textarea></div>
+      </div>
+    </div>
+    <div class="page-actions">
+      <button type="button" class="btn-primary" id="btn-save-final">로드맵 완성하기</button>
+    </div>
+    <div class="summary" id="summary" hidden>
+      <h3><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 13 4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> <span id="summary-title"></span></h3>
+      <p class="summary-goal" id="summary-goal"></p>
+      <div class="summary-grid" id="summary-grid"></div>
+      <p class="summary-note">작성 내용은 구글시트에 저장되었습니다. 언제든 다시 접속해 수정할 수 있습니다.</p>
+    </div>
+  </section>
+
+</main>
+
+<div class="toast-wrap" id="toast-wrap"></div>
+
+<script src="js/config.js"></script>
+<script src="js/api.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
