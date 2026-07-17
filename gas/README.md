@@ -4,7 +4,7 @@
 **이 가이드대로 코드를 반영하고 "같은 배포"에 새 버전을 올리면** 웹앱이 바로 동작합니다.
 
 - 스프레드시트: https://docs.google.com/spreadsheets/d/14tYk1n65EDeCfmF95YDAeBwsxUcFNhruwMdvGU-boD0/edit
-- 배포 URL: `https://script.google.com/macros/s/AKfycbwX-k-8fyDg29KxUgkN-6szHPXmQweLSzDooIsAbVy59xUl4BciVtIERsC6pNYifWvR5A/exec`
+- 배포 URL: `https://script.google.com/macros/s/AKfycbzqnZTGhijnsCVQmBblgQlBg6EWkOv3N5BaFmhYKX_0hI74hDbO2ghYuoF2ud2-HPiNMA/exec`
 
 ## 반영 절차
 
@@ -15,7 +15,7 @@
    - 웹 앱 설정: 실행 계정 **나**, 액세스 권한 **모든 사용자**
 4. 브라우저에서 아래 주소를 열어 시트 탭 자동 생성:
    ```
-   https://script.google.com/macros/s/AKfycbwX-k-8fyDg29KxUgkN-6szHPXmQweLSzDooIsAbVy59xUl4BciVtIERsC6pNYifWvR5A/exec?action=setup
+   https://script.google.com/macros/s/AKfycbzqnZTGhijnsCVQmBblgQlBg6EWkOv3N5BaFmhYKX_0hI74hDbO2ghYuoF2ud2-HPiNMA/exec?action=setup
    ```
    → `{"ok":true,"message":"setup complete"}` 가 보이면 성공. 시트에 `auth / roadmap / flow / final` 4개 탭이 생깁니다.
 5. **auth 탭** A열 2행부터 연수 참여 선생님 이름을 입력합니다. (여기 있는 이름만 로그인 가능. `테스트교사`는 테스트용 샘플이며 지워도 됩니다.)

@@ -31,7 +31,7 @@
 - **CORS**: GAS는 preflight(OPTIONS)를 처리하지 못하므로, POST는 `Content-Type: text/plain;charset=utf-8`로
   JSON 문자열을 전송해 simple request로 처리(표준 GAS 패턴). 응답은 `ContentService` JSON.
 - **DB**: 구글시트 `14tYk1n65EDeCfmF95YDAeBwsxUcFNhruwMdvGU-boD0`.
-- **GAS 배포 URL**: `https://script.google.com/macros/s/AKfycbwX-k-8fyDg29KxUgkN-6szHPXmQweLSzDooIsAbVy59xUl4BciVtIERsC6pNYifWvR5A/exec`
+- **GAS 배포 URL**: `https://script.google.com/macros/s/AKfycbzqnZTGhijnsCVQmBblgQlBg6EWkOv3N5BaFmhYKX_0hI74hDbO2ghYuoF2ud2-HPiNMA/exec`
   (FE `config.js`에 상수로 보관).
 
 ## 4. 화면 구성 (4페이지)
