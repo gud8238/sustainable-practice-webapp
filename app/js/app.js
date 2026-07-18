@@ -220,14 +220,8 @@ document.querySelectorAll('[data-draft]').forEach(el => {
   el.addEventListener('input', saveDraft);
 });
 
-/* 로그인 배경 영상: 자동재생이 막히거나 탭 전환으로 멈추면 다시 재생 */
-const heroVideo = document.querySelector('.login-art video');
-if (heroVideo) {
-  const ensurePlay = () => { heroVideo.play().catch(() => {}); };
-  ensurePlay();
-  document.addEventListener('visibilitychange', () => { if (!document.hidden) ensurePlay(); });
-  heroVideo.addEventListener('pause', () => { if (!document.hidden) ensurePlay(); });
-}
+/* 브랜드(AI 아이콘) 클릭 → 메인(히어로) 페이지로 */
+$('brand-home').addEventListener('click', () => { showPage('page-login'); });
 
 /* ---------- 초기화 ---------- */
 

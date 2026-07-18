@@ -1,4 +1,14 @@
-# Design System v4 — "Nodeflow Dark" (지속가능한 실천방안 세우기 활동지 웹앱)
+# Design System v5 — "Nodeflow Light" (지속가능한 실천방안 세우기 활동지 웹앱)
+
+> **v5 변경 요약**: 전체 테마를 Nodeflow의 **라이트 섹션 문법**(화이트 캔버스 + 블랙 헤딩 + 라이트 블루그레이
+> 카드 + 블루 CTA — 홈 "About us"/"How it works" 섹션 실측)으로 전환. 히어로 영상 미디어 카드 제거,
+> 브랜드 아이콘을 AI 모노그램(클릭 시 메인 이동)으로 교체, 행성 에셋에 80s 저속 회전 애니메이션 추가.
+> 라이트 토큰: bg #FFFFFF(셸)/#EEF1F5(바깥), surface #F4F6FA, line 블랙 8%/22%, 텍스트 #0C0E18(70/60/45% 스케일),
+> CTA #2076FF(hover #185FD6), 액센트 텍스트 대비 보정(blue #2563EB·green #0E9F6E·purple #6366F1·amber #B45309,
+> 틴트 bg는 v4와 동일 rgba 유지), 오류 #E5484D. 블루 버튼 위 스피너는 흰색.
+> 아래 v4 문서는 구성 문법(§4~) 기준으로 유효하며, 색 값은 위 라이트 토큰이 우선한다.
+
+# (구) Design System v4 — "Nodeflow Dark"
 
 > UI-UX-pro-max-skill 프로세스(요청 분석 → 스타일 탐색 → 규칙·안티패턴 필터 → 시스템 산출 → 사전 검증)로 개정.
 > 레퍼런스: 사용자 지정 Framer 프로젝트 **Nodeflow**(다크 SaaS 템플릿, 프로젝트 ID `SASVCZ55RkeqSlZT1Xog`)에서
