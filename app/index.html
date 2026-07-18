@@ -40,8 +40,9 @@
 
   <!-- ① 로그인 -->
   <section class="page is-active" id="page-login">
-    <div class="login-split">
-      <div class="login-form-side">
+    <div class="hero">
+      <img class="hero-planet" src="assets/planet.png" alt="" aria-hidden="true">
+      <div class="hero-content">
         <span class="overline"><svg class="star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c.9 5.8 2.5 8.5 4.4 10.4C18.3 12.3 21 13 24 12c-5.8.9-8.5 2.5-10.4 4.4C11.7 18.3 11 21 12 24c-.9-5.8-2.5-8.5-4.4-10.4C5.7 11.7 3 11 0 12c5.8-.9 8.5-2.5 10.4-4.4C12.3 5.7 13 3 12 0Z"/></svg> 2026 인공지능 활용 선도교사 양성연수</span>
         <h1>교원 전문성개발<br>맞춤형 경로설계</h1>
         <p class="login-desc">연수에 참여하시는 선생님의 성함을 입력해서 시작해 주세요.</p>
@@ -68,37 +69,41 @@
     </div>
     <div class="card-grid">
       <div class="input-card">
-        <div class="card-title">
+        <div class="card-top">
           <span class="icon-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="1.2" fill="currentColor"/></svg></span>
-          <h3>성장 목표</h3>
+          <span class="trend-pill">목표</span>
         </div>
+        <div class="card-title"><span class="card-num" aria-hidden="true">01</span><h3>성장 목표</h3></div>
         <p class="card-hint">나는 ~한 교사가 될 것이다.</p>
         <label class="sr-only" for="rm-growthGoal">성장 목표</label>
         <textarea id="rm-growthGoal" data-draft placeholder="예) AI를 활용해 학생의 성장을 지원하는 교사 되기"></textarea>
       </div>
       <div class="input-card">
-        <div class="card-title">
+        <div class="card-top">
           <span class="icon-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M13 5a1.8 1.8 0 1 0 0-3.6A1.8 1.8 0 0 0 13 5Zm-7 17 3.2-6.4M17.5 22l-3-5.5-3.5-2 1.4-4.6M8 8.5l3.9-2.1 2 3.6 3.6 1.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-          <h3>실천 활동</h3>
+          <span class="trend-pill">실천</span>
         </div>
+        <div class="card-title"><span class="card-num" aria-hidden="true">02</span><h3>실천 활동</h3></div>
         <p class="card-hint">이를 위해 ~을 실천할 것이다. <em>(시작–적용–확장–지속)</em></p>
         <label class="sr-only" for="rm-actions">실천 활동</label>
         <textarea id="rm-actions" data-draft placeholder="예) 학생 맞춤형 평가 웹앱을 만들어 1개 교과부터 적용해 보기"></textarea>
       </div>
       <div class="input-card">
-        <div class="card-title">
+        <div class="card-top">
           <span class="icon-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="8" width="18" height="12" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M9 8V6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13h18M12 12v3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
-          <h3>지원 자원</h3>
+          <span class="trend-pill">자원</span>
         </div>
+        <div class="card-title"><span class="card-num" aria-hidden="true">03</span><h3>지원 자원</h3></div>
         <p class="card-hint">실천을 위해 필요한 것들 · 활용할 연수 · 도구 · 공동체</p>
         <label class="sr-only" for="rm-resources">지원 자원</label>
         <textarea id="rm-resources" data-draft placeholder="예) 바이브코딩 연수, 생성형AI 구독, 학교 전문적학습공동체"></textarea>
       </div>
       <div class="input-card">
-        <div class="card-title">
+        <div class="card-top">
           <span class="icon-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="5" y="4" width="14" height="17" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M9 4.5V3h6v1.5M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-          <h3>점검 방법</h3>
+          <span class="trend-pill">점검</span>
         </div>
+        <div class="card-title"><span class="card-num" aria-hidden="true">04</span><h3>점검 방법</h3></div>
         <p class="card-hint">나의 성장을 어떻게 점검할 수 있는가 · 체크리스트, 동료피드백, 자기기록</p>
         <label class="sr-only" for="rm-checkMethods">점검 방법</label>
         <textarea id="rm-checkMethods" data-draft placeholder="예) 매주 금요일 사용 기록 남기기, 동료 선생님께 피드백 받기"></textarea>
@@ -119,37 +124,45 @@
     </div>
     <div class="timeline">
       <div class="timeline-item">
-        <span class="tl-num">1</span>
-        <div class="tl-card">
-          <span class="tl-period">1–2개월</span>
+        <div class="tl-meta">
+          <span class="step-pill"><span class="step-dot" aria-hidden="true"></span>STEP 1</span>
           <h3>시작</h3>
+          <span class="tl-period">1–2개월</span>
+        </div>
+        <div class="tl-card">
           <label class="sr-only" for="fl-start">시작 단계 실천</label>
           <textarea id="fl-start" data-draft placeholder="예) 학생 맞춤형 평가 웹앱 만들기"></textarea>
         </div>
       </div>
       <div class="timeline-item">
-        <span class="tl-num">2</span>
-        <div class="tl-card">
-          <span class="tl-period">3–4개월</span>
+        <div class="tl-meta">
+          <span class="step-pill"><span class="step-dot" aria-hidden="true"></span>STEP 2</span>
           <h3>적용</h3>
+          <span class="tl-period">3–4개월</span>
+        </div>
+        <div class="tl-card">
           <label class="sr-only" for="fl-apply">적용 단계 실천</label>
           <textarea id="fl-apply" data-draft placeholder="예) 먼저 1개 교과에 적용하고 효과성 검증하기"></textarea>
         </div>
       </div>
       <div class="timeline-item">
-        <span class="tl-num">3</span>
-        <div class="tl-card">
-          <span class="tl-period">5–6개월</span>
+        <div class="tl-meta">
+          <span class="step-pill"><span class="step-dot" aria-hidden="true"></span>STEP 3</span>
           <h3>확장</h3>
+          <span class="tl-period">5–6개월</span>
+        </div>
+        <div class="tl-card">
           <label class="sr-only" for="fl-expand">확장 단계 실천</label>
           <textarea id="fl-expand" data-draft placeholder="예) 필요한 기능과 아쉬운 점을 바탕으로 웹앱 업그레이드"></textarea>
         </div>
       </div>
       <div class="timeline-item is-accent">
-        <span class="tl-num">4</span>
-        <div class="tl-card">
-          <span class="tl-period">이후</span>
+        <div class="tl-meta">
+          <span class="step-pill"><span class="step-dot" aria-hidden="true"></span>STEP 4</span>
           <h3>지속</h3>
+          <span class="tl-period">이후</span>
+        </div>
+        <div class="tl-card">
           <label class="sr-only" for="fl-sustain">지속 단계 실천</label>
           <textarea id="fl-sustain" data-draft placeholder="예) 모든 교과에 적용하고 학생별 피드백으로 성장 이끌어내기"></textarea>
         </div>
