@@ -1,94 +1,96 @@
-# Design System v2 — "Lumina Meadow" (지속가능한 실천방안 세우기 활동지 웹앱)
+# Design System v3 — "Kidora Bright" (지속가능한 실천방안 세우기 활동지 웹앱)
 
-> UI-UX-pro-max-skill 프로세스(요청 분석 → 스타일 탐색 → 규칙·안티패턴 필터 → 시스템 산출 → 사전 검증)로 전면 개정.
-> 레퍼런스: 사용자 제공 "Lumina" 로그인 화면 (라임 그린 초원, 흰 플로팅 컨테이너, 귀여운 우파루파 마스코트, 라운드 프렌들리 타이포).
-> 스타일 분류: **Soft UI Evolution + Playful Illustration** (교육 도메인과 잘 어울리는 따뜻하고 격려하는 무드).
+> UI-UX-pro-max-skill 프로세스(요청 분석 → 스타일 탐색 → 규칙·안티패턴 필터 → 시스템 산출 → 사전 검증)로 개정.
+> 레퍼런스: 사용자 지정 Framer 프로젝트 **Kidora**(교육 템플릿, 프로젝트 ID `myj9gfbiKATWtYAZUD5r`)에서
+> Framer Agent CLI로 **실제 컬러 스타일·텍스트 스타일·홈 화면**을 추출해 그대로 토큰화함.
+> 원칙: **디자인 스타일만 반영.** HTML 구조·JS 로직·GAS 연동·배포는 v2에서 변경하지 않는다.
 
 ## 1. Concept
 
-"성장의 초원을 걷는 여정". 배경은 봄 들판의 라임 그린, 콘텐츠는 크게 떠 있는 흰 카드(플로팅 셸),
-마스코트(새싹 우파루파 '루미')가 로그인 화면에서 선생님을 맞이한다. 모든 페이지가 같은 셸 안에서 전환된다.
+"밝고 따뜻한 교육 브랜드". 웜 크림 캔버스 위에 파스텔 카드가 리듬감 있게 배치되고,
+검정 볼드 헤딩이 명확한 위계를 만든다. 딥 퍼플 CTA와 그린·앰버 액센트, 스타버스트(✳) 장식이 포인트.
 
-## 2. Pattern (페이지 구조)
+## 2. Colors (Kidora 컬러 스타일 실측값)
 
-- **Floating Shell**: 라임 그라데이션 + 미세 도트 텍스처 배경 위에 radius 32px 흰 셸이 떠 있음. 셸 안에 헤더(로고·스텝 내비·사용자)와 콘텐츠.
-- **① 로그인**: 셸 내부 2분할 — 좌: 인사 헤드라인+이름 입력 폼 / 우: 라운드(24px) SVG 일러스트 패널(하늘·언덕·나무·길·마스코트). 모바일에선 일러스트가 상단 배너로 축소.
-- **② 실천로드맵**: 2×2 흰 카드 그리드(라임 아이콘 배지), 스태거 등장.
-- **③ 실천흐름**: 4단계 타임라인 — 연라임 카드, 숫자 뱃지 1~3 그린 / 4 옐로 액센트.
-- **④ 로드맵 완성**: 라임 그라데이션 성장목표 배너(전구 아이콘) + 3×3 흰 셀 그리드 + 저장 후 요약 카드.
-
-## 3. Colors
-
-| 역할 | 토큰 | 값 | 용도 |
+| 역할 | 토큰 | 값 | Kidora 원본 스타일명 |
 |---|---|---|---|
-| Primary | `--grass-500` | `#84B622` | CTA 버튼, 활성 스텝, 로고 |
-| Primary-deep | `--grass-600` | `#6C9A15` | hover, 아이콘 배지 |
-| Secondary | `--leaf-700` | `#4C6B1F` | 헤드라인, 카드 타이틀 |
-| Background | `--meadow-100` | `#EBF4C4` | 페이지 배경(그라데이션 하단) |
-| Text | `--ink-800` | `#38432E` | 본문 |
+| Page | `--page` | `#FCFAED` | Page Color |
+| Card 1 (민트) | `--card-mint` | `#D7FDCF` | Card Color 01 |
+| Card 2 (라벤더) | `--card-lav` | `#EBE1FD` | Card Color 02 |
+| Card 3 (피치) | `--card-peach` | `#FEEECD` | Card Color 03 |
+| CTA | `--purple` | `#520080` | Logo Background 02 |
+| Accent | `--green` | `#09D89A` | Logo Background 01 |
+| Accent 2 | `--amber` | `#FCB520` | Logo Background 03 |
+| Heading | `--ink` | `#000000` | Black Color |
+| Body | `--para` | `#575757` | Paragraph Color |
+| Border | `--border` | `#D5D5D5` | Border Color |
+| Error | `--warn` | `#FF2244` | Warining |
 
-보조: `--meadow-50 #F6FADF`(배경 상단), `--lime-100 #F0F7D4`(연카드), `--lime-200 #E2EFB4`(뱃지 배경), `--sun-400 #F5CE42`(옐로 액센트), `--sky-300 #A9D9F2`(일러스트 하늘), `--cloud #FFFFFF`, `--surface #FFFFFF`(셸/카드), `--field #F5F5F0`(입력 필드 fill), `--ink-500 #75806A`(보조 텍스트), `--red-500 #E05252`(오류), `--blush #F7C6C0`(마스코트 볼).
+보조: `--white #FFFFFF`, `--purple-hover #3E0061`(퍼플 hover 심화), `--purple-tint rgba(82,0,128,.08)`(focus ring).
 
-- 대비: `--ink-800` on `--surface` ≈ 10:1, 버튼 white on `--grass-500` 은 굵은(700) 15px 이상만 사용, 본문급엔 `--grass-600` 이상. 검증 항목에 포함.
+- 대비: 검정 헤딩 on 크림 ≈ 19:1, `--para` on 크림 ≈ 5.4:1, 흰 텍스트 on 퍼플 ≈ 12:1 — 모두 4.5:1 이상.
+- 앰버·그린 위 텍스트는 검정만 사용(흰색 금지 — 대비 부족).
 - 다크모드 범위 외(`color-scheme: light`).
 
-## 4. Typography
+## 3. Typography (Kidora 텍스트 스타일 실측값)
 
-- **Display**: `Jua` (Google Fonts, 한글 라운드체) — 로고, 페이지 헤드라인, 스텝 타이틀, 마스코트 말풍선. 레퍼런스의 둥근 로고 타이포를 한글로 번역한 선택.
-- **Body**: `Pretendard Variable` — 본문, 입력, 안내문. 폴백 system-ui 계열.
-- 스케일: 로고 22(Jua) / 헤드라인 30(Jua) / 섹션 타이틀 20(Jua) / 카드 타이틀 17(Jua) / 본문·입력 15(Pretendard 400, lh 1.6) / 캡션 13.
+- **Heading**: `Plus Jakarta Sans`(700/800, Google Fonts) + 한글 폴백 `Pretendard Variable` — Kidora H1~H6과 동일 계열. 검정.
+- **Body**: `Nunito Sans`(400/600/700) + `Pretendard Variable` — Kidora Body 스타일과 동일.
+- v2의 Jua(라운드체)는 **제거** — Kidora는 모던 지오메트릭 볼드 스타일.
+- 스케일(웹앱 규모에 맞게 Kidora 비율 축소): 헤드라인 32/800/1.15, 로그인 h1 38/800, 섹션 라벨(오버라인) 13/700 대문자풍, 카드 타이틀 18/700, 본문·입력 15/400(lh 1.6), 캡션 13.
 
-## 5. Key Effects & Motion (스킬 규칙: 150–300ms smooth + gentle hover + reduced-motion 필수)
+## 4. Pattern (구조 변화 없음, 스킨만)
+
+- 플로팅 셸 유지하되 **셸 배경을 크림(#FCFAED)**으로, 페이지 배경은 크림을 살짝 어둡게(`#F5F2E3`) — Kidora의 풀-크림 캔버스 느낌.
+- 페이지 헤드에 **오버라인 라벨**(스타버스트 SVG + 소제목) 추가 — Kidora의 "● ABOUT US" 섹션 라벨 문법.
+- 카드는 **파스텔 3색 로테이션**(민트→라벤더→피치→흰+보더), radius 24px, 플랫(기본 그림자 없음, hover 시만 얕은 그림자).
+
+## 5. Components
+
+- **버튼 Primary**: 딥 퍼플 풀-pill(radius 999px), 흰 700 텍스트, 높이 48px. hover: `--purple-hover` + translateY(-2px). 화살표 슬라이드 모션 유지.
+- **버튼 Ghost**: 흰 배경 + `--border` 1.5px 보더 pill, 검정 텍스트. hover: 검정 보더.
+- **스텝 내비**: pill — 비활성 흰+보더, hover 크림, **현재 딥 퍼플**(흰 글자). step-num 원은 현재일 때 앰버 배경+검정 숫자.
+- **입력**: 흰 배경 + `--border` 보더, radius 14px. focus: 퍼플 보더 + `--purple-tint` ring.
+- **입력 카드**(2페이지): 파스텔 로테이션 bg, 보더 없음. 아이콘 배지 40px 원 — 그린/퍼플/앰버/검정 순환(흰 아이콘, 앰버는 검정 아이콘).
+- **타임라인**(3페이지): 숫자 원 — 1·2·3 검정 bg 흰 숫자, 4(지속) 앰버 bg 검정 숫자. 카드 bg 민트/라벤더/피치/흰+퍼플 1.5px 보더. 연결선 `--border`.
+- **성장목표 배너**(4페이지): 딥 퍼플 bg, 흰 텍스트, 전구 아이콘 앰버 — Kidora의 "Join our community" 퍼플 섹션 문법.
+- **매트릭스**: 기간 셀 파스텔 로테이션(민트/라벤더/피치) + 검정 700 텍스트. 셀 textarea 흰+보더.
+- **요약 카드**: 파스텔 로테이션 bg, 기간 pill은 검정 bg 흰 텍스트, dt 라벨은 퍼플.
+- **토스트**: 흰 pill + 보더, 상태 점(성공 그린/오류 `--warn`), 검정 텍스트.
+- **푸터**: 유지, 보더 `--border`, 링크 퍼플.
+- **미디어 패널**(로그인): hero.mp4 루프 영상 유지(v2와 동일), radius 24px.
+- **스타버스트 장식**: 8각 별 SVG(그린/앰버), 오버라인 라벨 앞과 로그인 헤드라인 옆에 소형으로만 사용.
+
+## 6. Key Effects & Motion (v2 스펙 계승, 색만 교체)
 
 | 모션 | 스펙 |
 |---|---|
-| 페이지 전환 | fade + translateY(10px), 240ms `cubic-bezier(0.22, 1, 0.36, 1)` |
-| 스태거 등장 | 페이지 활성화 시 카드들 60ms 간격 stagger(최대 5개), 각 400ms 동일 커브 |
-| 버튼 hover | 배경 진해짐 + translateY(-2px) + 그림자 상승 200ms, 내부 화살표 `→` translateX(4px) |
-| 카드 hover | translateY(-3px) + 그림자 상승 220ms |
-| 입력 focus | 필드 fill → white, 라임 2px ring, 180ms |
-| 마스코트 | 3.2s 상하 4px bobbing 루프, 아가미 잎 2.6s 살랑임(rotate ±6°) |
-| 구름 | 두 겹이 40s/55s 좌우 drift 루프 (opacity 낮음, 주의 분산 방지) |
-| 토스트 | slide-up 12px + fade 250ms, 2.5s 후 fade-out |
-| 저장 중 | 버튼 스피너 700ms linear 회전 |
-| reduced-motion | `prefers-reduced-motion: reduce` 시 루프 애니메이션(마스코트·구름) 정지, 전환 0.01ms |
+| 페이지 전환 | fade + translateY(10px), 240ms `cubic-bezier(0.22,1,0.36,1)` |
+| 스태거 등장 | 카드 60ms 간격, 각 400ms 동일 커브 |
+| 버튼 hover | 배경 심화 + translateY(-2px) + 화살표 translateX(4px), 200ms |
+| 카드 hover | translateY(-3px) + `0 10px 24px rgba(0,0,0,.08)`, 220ms |
+| 입력 focus | 퍼플 보더 + 틴트 ring, 180ms |
+| 스타버스트 | 로그인 장식만 24s 저속 회전(진폭 낮음) |
+| 토스트/스피너 | v2 동일 |
+| reduced-motion | 루프·전환 전부 해제 |
 
-## 6. Components
+## 7. Responsive / Accessibility (v2 계승)
 
-- **셸**: max-width 1120px, radius 32px, `box-shadow: 0 24px 60px rgba(76,107,31,.14)`, 배경 위 24px 여백.
-- **헤더**(셸 상단): 좌 로고(Jua, grass-500) + 부제(캡션) / 중앙 스텝 필: pill 배경 `--lime-100`, 활성은 `--grass-500` 흰 글자, 완료 뱃지는 체크 없이 진라임. 잠김은 40% 투명.
-- **버튼**: Primary — 라임 그라데이션(`#9CCB3B→#84B622`), radius 14px, 높이 48px, 흰 700 텍스트, 화살표 포함 가능. Ghost — `--lime-100` fill, `--leaf-700` 텍스트. 모두 `cursor: pointer`.
-- **입력**: `--field` fill, 보더 없음, radius 12px, focus 시 white + 라임 ring. placeholder `#A9B199`.
-- **입력 카드**: 흰 배경, radius 20px, 얕은 그림자, 라임 원형 아이콘 배지(흰 SVG 스트로크 아이콘), Jua 타이틀, 캡션 안내문.
-- **타임라인 카드**: `--lime-100` fill, radius 20px. 숫자 뱃지 40px 원 — 1·2·3 grass, 4 sun-400(글자 ink-800).
-- **성장목표 배너**: 라임 그라데이션(`#84B622→#6C9A15`), 흰 텍스트, 전구 SVG, radius 20px.
-- **요약 카드**: 흰 카드 + `--lime-100` 기간 pill(ink 텍스트) + dt 라임 라벨.
-- **토스트**: 흰 pill + 좌측 상태 점(성공 grass / 오류 red), ink 텍스트, `role=status/alert`.
-- **미디어 패널**(로그인): `assets/hero.mp4` 루프 영상(`autoplay muted loop playsinline`, object-fit cover, radius 24px). 자동재생이 차단되면 JS가 가시 상태에서 재생을 재시도. `aria-hidden`, 장식 전용. (v2 초기의 SVG 초원 일러스트를 사용자 제공 영상으로 교체.)
-- **푸터**: 셸 하단 슬림 바 — `Develop. 목포AISW교육센터 서찬아 · Connect : rndxmrdl@naver.com`(mailto 링크), 캡션 12px, 상단 라임 보더.
+- 375/768/1024/1440 브레이크포인트, 모바일 1열·타임라인 세로·매트릭스 카드 스택, 가로 스크롤 금지.
+- 라벨 연결·`aria-current`·focus-visible(퍼플 2px ring)·SVG 아이콘 전용(이모지 금지)·`prefers-reduced-motion`.
 
-## 7. Responsive
+## 8. Anti-Patterns (금지)
 
-375px(모바일 기준) / 768px(태블릿) / 1024px(데스크톱) / 1440px(셸 여백 확장).
-- 모바일: 셸 radius 20px·여백 12px, 로그인 일러스트는 높이 180px 상단 배너, 카드 1열, 타임라인 세로, 매트릭스 기간별 카드 스택(+셀 라벨 표시), 스텝 라벨 숨김.
+- AI 보라/핑크 **그라데이션** — Kidora는 플랫 솔리드 퍼플만 사용. 그라데이션 버튼 금지.
+- 파스텔 위 저대비 회색 텍스트(#9D9D9D 미만은 장식 전용).
+- 앰버/그린 배경 위 흰 텍스트.
+- 과도한 장식(스타버스트 남발) — 페이지당 2~3개 이하.
 
-## 8. Accessibility
+## 9. Pre-Delivery Checklist
 
-- 모든 입력 `<label>`(시각적 또는 sr-only), 스텝 내비 `aria-current="step"`, 일러스트·장식 `aria-hidden="true"`.
-- focus-visible: 2px `--grass-600` ring, offset 2px. 이모지 UI 금지(SVG만). 본문 대비 4.5:1+.
-
-## 9. Anti-Patterns (금지)
-
-- AI 보라/핑크 그라데이션, 네온, 유리모피즘 — 무드 파괴.
-- 마스코트·구름의 과한 애니메이션(어지러움 유발) — 진폭 4px/±6° 이내 유지.
-- 라임 배경 위 저대비 텍스트(라임 위엔 `--leaf-700` 이상만).
-- 일러스트를 로그인 외 페이지에 크게 반복(콘텐츠 집중 방해) — 이후 페이지는 셸+카드 중심.
-
-## 10. Pre-Delivery Checklist
-
-- [ ] SVG 아이콘/일러스트만 사용(이모지 없음)
+- [ ] SVG 아이콘/장식만 사용(이모지 없음)
 - [ ] 모든 인터랙션 요소 focus-visible 링 + `cursor: pointer`
-- [ ] 본문 대비 4.5:1 이상 (라임 배경 위 텍스트 포함)
-- [ ] `prefers-reduced-motion` — 루프 정지·전환 제거 확인
+- [ ] 본문 대비 4.5:1 이상 (파스텔 카드 위 포함)
+- [ ] `prefers-reduced-motion` 대응
 - [ ] 375/768/1024 반응형 + 가로 스크롤 없음
-- [ ] 스태거·hover·전환이 150–300ms 규칙 내
+- [ ] 기능 무변경 확인(로그인·저장·로드·프리필·draft 동작 동일)
